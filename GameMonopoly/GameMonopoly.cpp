@@ -2,19 +2,93 @@
 //
 
 #include <iostream>
+#include <string>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+
+
+
+
+
+//#2
+int decidePlayers() {
+    cout << " " << endl;
+    cout << " " << endl;
+    cout << " " << endl;
+
+    cout << "*********************" << endl;
+    cout << "*********************" << endl;
+    cout << "   How Many Players? " << endl;
+    cout << "   ------------      " << endl;
+    cout << "      Up To 4        " << endl;
+    cout << "*********************" << endl;
+    cout << "*********************" << endl;
+
+    string name1, name2, name3, name4, gameName;
+    char in;
+    bool done = false;
+    while(!done){
+        cin >> in;
+        if (in == '1') {
+            cout << "What name would you like to save you game as?" << endl;
+            cin >> gameName;
+            cout << "What's your name?" << endl;
+            cin >> name1;
+
+        }
+        else if (in == '2') {
+
+        }
+        else if (in == '3') {
+
+        }
+        else if (in == '4') {
+
+        }
+        else {
+            cout << "Please enter a valid input" << endl;
+        }
+    }
+    return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
+
+//Starts here #1
+int main()
+{
+    cout << "*********************" << endl;
+    cout << "*********************" << endl;
+    cout << "   MONOPOLY          " << endl;
+    cout << "   ------------      " << endl;
+    cout << "    Start  (S)       " << endl;
+    cout << "    Load   (L)       " << endl;
+    cout << "    Quit   (Q)       " << endl;
+
+    bool done = false;
+    char in;
+
+    while(!done){
+        cin >> in;
+
+        if (in == 'S' || in == 's') {
+            cout << "Starting Game!!! " << endl;
+            decidePlayers();
+        }
+        else if (in == 'L' || in == 'l') {
+            cout << "Loading games..." << endl;
+            //loadGames();
+        }
+        else if (in == 'q' || in == 'Q') {
+            cout << "Goodbye!";
+            return 0;
+        }
+        else {
+            cout << "Enter a valid input please" << endl;
+        }
+    }
+}
+
+
+
