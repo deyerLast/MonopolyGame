@@ -1,50 +1,34 @@
 #include "Player.h"
-#include <string>
-#include <iostream>
+using namespace std;
 
-class Player {
-private:
-	int Position, Money, size=0;
-	string Name;
-	string* Properties = new string[size];
+Player::Player() {
+	moneyAmount = 2500;
+	location = 0;
+	for(int i = 0; i < 40; i++){
+		indexOfProperties[i] = false;
+	}
+	alive = true;
 
-public:
-	Player(string name, int position, int money) {
-		Name = name;
-		Position = position;
-		Money = money;
-		string* Properties = new string[size];
-	}
+	playerName = "David";
+}
 
-	string getName() {
-		return Name;
+Player::Player(int money, string name) {								//Creates class using header file and scope(::)
+	
+	moneyAmount = money;
+	location = 0;
+	for (int i = 0; i < 40; i++) {
+		indexOfProperties[i] = false;
 	}
-	void setName(string name) {
-		Name = name;
-	}
+	alive = true;
 
-	int getMoney() {
-		return Money;
-	}
-	void setMoney(int money) {
-		Money = money;
-	}
+	playerName = "David";
+}
 
-	int getPosition() {
-		return Position;
-	}
-	void setPosition(int position) {
-		if (position > 39) {
-			Position = 0;
-		}else{ 
-			Position = position;
-		};
-	}
 
-	void setProperties(string* properties) {
-		Properties = properties;
-	}
-	string* getProperties() {
-		return Properties;
-	}
-};
+
+//	SET FUNCTIONS IMPLEMENTED
+void Player::setPlayerName(string inputName) {
+	playerName = inputName;
+}
+
+// GET FUNCTIONS IMPLEMENTED
